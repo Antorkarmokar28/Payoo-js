@@ -25,20 +25,21 @@
         <!-- login section -->
         <div class="hero">
             <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-              <div class="card-body">
+              <form class="card-body">
                 <fieldset class="fieldset">
                   <label class="label">Account Number</label>
-                  <input type="text" class="input" placeholder="Enter your number" />
+                  <input value="15852365214" id="account-input" type="text" class="input" placeholder="Type your number" />
                   <label class="label">Password</label>
-                  <input type="text" class="input" placeholder="Enter your PIN" />
+                  <input value="1234" id="pin-input" type="password" class="input" placeholder="Type your PIN" />
                   <div><a class="link link-hover">Forgot password?</a></div>
-                  <button class="btn btn-neutral mt-4">Login</button>
+                  <button id="login-id" class="btn btn-neutral mt-4">Login</button>
                 </fieldset>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <script src="./script/login.js"></script>
   </body>
 </html>
