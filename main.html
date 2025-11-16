@@ -26,7 +26,9 @@
                   <img class="w-16" src="./assets/Group.png" alt="logo" />
                 </div>
                 <div>
-                  <h3 class="text-2xl font-bold">$ 45000</h3>
+                  <h3 class="text-2xl font-bold">
+                    $ <span id="main-balance">45000</span>
+                  </h3>
                   <p>Available Balance</p>
                 </div>
               </div>
@@ -97,9 +99,9 @@
                 >
                   <form class="card-body">
                     <fieldset class="fieldset">
-                      <label class="label">Select A Bank</label>
+                      <legend class="label">Select A Bank</legend>
                       <select class="input" name="" id="">
-                        <legend>Select</legend>
+                        <option disabled selected>Select Bank</option>
                         <option value="Bkash">Bkash</option>
                         <option value="Nagad">Nagad</option>
                         <option value="DBBL">DBBL</option>
@@ -110,13 +112,22 @@
                         class="input"
                         placeholder="Enter 11 digit Account Number"
                       />
-                      <label class="label">Amount to Add</label>
+                      <label class="label">Add to Amount</label>
                       <input
+                        id="amount"
+                        type="text"
+                        class="input"
+                        placeholder="Add to Amount"
+                      />
+                      <label class="label">Pin</label>
+                      <input
+                        id="pin-input"
                         type="password"
                         class="input"
-                        placeholder="Amount to Add"
+                        placeholder="Enter your PIN"
                       />
                       <button
+                        id="add-money-btn"
                         class="btn btn-neutral mt-4 bg-blue-600 text-gray-200 rounded-full border-none"
                       >
                         Add Money
@@ -130,5 +141,6 @@
         </div>
       </section>
     </main>
+    <script src="./script/addBalance.js"></script>
   </body>
 </html>
