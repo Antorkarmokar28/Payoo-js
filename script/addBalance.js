@@ -8,10 +8,14 @@ document
     const convertPin = parseFloat(pin);
     const mainBalance = document.getElementById("main-balance").innerText;
     const convertMainBalance = parseFloat(mainBalance);
-    if (convertPin === 1234) {
-      const sum = convertMainBalance + convertAmount;
-      document.getElementById("main-balance").innerText = sum;
+    if (convertAmount && convertPin) {
+      if (convertPin === 1234) {
+        const sum = convertMainBalance + convertAmount;
+        document.getElementById("main-balance").innerText = sum;
+      } else {
+        alert("Incorrect Password");
+      }
     } else {
-      alert("Incorrect PIN");
+      alert("Enter Amount");
     }
   });
