@@ -49,6 +49,7 @@
             >
               <!-- add money -->
               <div
+                id="add-money-box"
                 class="flex justify-center flex-col items-center p-4 rounded-xl border-2 border-slate-500 cursor-pointer"
               >
                 <img class="w-10" src="./assets/wallet1.png" alt="" />
@@ -56,6 +57,7 @@
               </div>
               <!-- cashout -->
               <div
+                id="cashout-box"
                 class="flex justify-center flex-col items-center p-4 rounded-xl border-2 border-slate-500 cursor-pointer"
               >
                 <img class="w-10" src="./assets/send1.png" alt="" />
@@ -91,7 +93,7 @@
               </div>
             </div>
             <!-- add money form -->
-            <div class="mt-8">
+            <div id="add-money-form" class="mt-8">
               <h3 class="text-4xl font-bold text-blue-600 mb-3">Add Money</h3>
               <div class="hero-content flex-col lg:flex-row-reverse">
                 <div
@@ -137,10 +139,51 @@
                 </div>
               </div>
             </div>
+            <!-- cashout money form -->
+            <div id="cashout-form" class="mt-8">
+              <h3 class="text-4xl font-bold text-blue-600 mb-3">Cashout</h3>
+              <div class="hero-content flex-col lg:flex-row-reverse">
+                <div
+                  class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+                >
+                  <form class="card-body">
+                    <fieldset class="fieldset">
+                      <label class="label">Agent Number</label>
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Enter 11 digit Agent Number"
+                      />
+                      <label class="label">Amount</label>
+                      <input
+                        id="amount"
+                        type="text"
+                        class="input"
+                        placeholder="Enter Amount"
+                      />
+                      <label class="label">Pin</label>
+                      <input
+                        id="pin-input"
+                        type="password"
+                        class="input"
+                        placeholder="Enter your PIN"
+                      />
+                      <button
+                        id="add-money-btn"
+                        class="btn btn-neutral mt-4 bg-blue-600 text-gray-200 rounded-full border-none"
+                      >
+                        Cashout
+                      </button>
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <script src="./script/toggle.js"></script>
     <script src="./script/addBalance.js"></script>
   </body>
 </html>
